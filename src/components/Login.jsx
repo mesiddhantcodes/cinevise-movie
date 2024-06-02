@@ -1,6 +1,12 @@
 import { useRef, useState } from "react";
 import Header from "./Header";
 import { checkValidData } from "../utils/validate";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { auth } from "../utils/firebase";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -11,21 +17,65 @@ const Login = () => {
   const handleButtonClick = () => {
     // Validate the form data
     if (isSignInForm) {
-      const msg = checkValidData(null,email.current.value, password.current.value);
+      const msg = checkValidData(
+        null,
+        email.current.value,
+        password.current.value
+      );
       setErrorMessage(msg);
-      return;
-    }
-    else{
-      const msg = checkValidData(name.current.value,email.current.value, password.current.value);
+      if (msg === null) {
+        signInWithEmailAndPassword(
+          auth,
+          email.current.value,
+          password.current.value
+        )
+          .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            console.log(user);
+            // ...
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            setErrorMessage(errorCode + "-" + errorMessage);
+          });
+      }
+
+      // return;
+    } else {
+      const msg = checkValidData(
+        name.current.value,
+        email.current.value,
+        password.current.value
+      );
       setErrorMessage(msg);
-      return;
+
+      if (msg === null) {
+        createUserWithEmailAndPassword(
+          auth,
+          email.current.value,
+          password.current.value
+        )
+          .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            console.log(user);
+            // ...
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode, errorMessage);
+            setErrorMessage(errorCode + "-" + errorMessage);
+            // ..
+          });
+      }
     }
 
     // const msg = checkValidData(name.current.value,email.current.value, password.current.value);
     // setErrorMessage(msg);
     // Sign In or Sign Up
-
-
   };
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
