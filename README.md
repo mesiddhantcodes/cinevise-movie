@@ -21,6 +21,7 @@
 - Implemented the Signout Feature
 - Update Profile 
 - Fetch Movies from TMDB
+- 
 
 
 
