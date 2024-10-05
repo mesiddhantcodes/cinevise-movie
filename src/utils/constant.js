@@ -24,5 +24,7 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "spanish", name: "Spanish" },
 ];
 
+export const OPEN_AI_KEY =
+  "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";
 
 // export const BACK_END_URL="https://movies-gpt-backend.onrender.com/"
