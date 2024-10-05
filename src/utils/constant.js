@@ -24,7 +24,6 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "spanish", name: "Spanish" },
 ];
 
-export const OPEN_AI_KEY = process.env.OPEN_AI_KEY
- 
+export const OPEN_AI_KEY = process.env.OPEN_AI_KEY;
 
 // export const BACK_END_URL="https://movies-gpt-backend.onrender.com/"
