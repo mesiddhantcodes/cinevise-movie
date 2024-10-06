@@ -1,5 +1,6 @@
-import OpenAI from "openai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import { OPENAI_KEY } from "../utils/constant";
 
-const openai=new OpenAI({
-    apiKey:process.env.OPEN_AI_KEY
-})
+const genAI = new GoogleGenerativeAI(OPENAI_KEY);
+
+export default genAI;
