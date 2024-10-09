@@ -1,10 +1,11 @@
 import React from "react";
 import { IMG_URL } from "../utils/constant";
 
-const MovieCard = ({posterPath}) => {
+const MovieCard = ({ posterPath }) => {
+  if (!posterPath) return null;
   return (
-    <div className="w-48 pr-4">
-      <img alt="Movie Card" src={IMG_URL+posterPath} />
+    <div className="w-36 md:w-48 pr-4 cursor-pointer">
+      <img alt="Movie Card" src={IMG_URL + posterPath} />
     </div>
   );
 };

@@ -3,9 +3,8 @@ import lang from "../utils/languageConstant";
 import { useDispatch, useSelector } from "react-redux";
 import { SAFETY_SETTINGS } from "../utils/constant";
 import genAI from "../utils/openAi";
-import { addGptMovieResult } from "../utils/gptSlice";
+import { addGptMovieResult } from "../redux/gptSlice";
 import useSearchMovieTMDB from "../hooks/useSearchMovieTMDB";
-
 
 const GptSearchBar = () => {
   const dispatch = useDispatch();
@@ -14,7 +13,7 @@ const GptSearchBar = () => {
   const searchMovieTMDB = useSearchMovieTMDB();
 
   const handleGptSearchClick = async () => {
-    console.log(searchText.current.value);
+    // console.log(searchText.current.value);
     // make an API call to GPT API and get Movie Results
     const gptQuery =
       "Act as a Movie Recommendatioin system and suggest some movies for the query :" +
@@ -38,12 +37,12 @@ const GptSearchBar = () => {
     dispatch(
       addGptMovieResult({ movieNames: gptMovies, movieResult: tmdbResults })
     );
-    console.log(tmdbResults);
+    // console.log(tmdbResults);
   };
   return (
-    <div className="pt-[10%] flex justify-center">
+    <div className="pt-[35%] md:pt-[10%] flex justify-center">
       <form
-        className=" w-1/2  m-6 bg-black grid grid-cols-12"
+        className=" w-full md:w-1/2  m-6 bg-black grid grid-cols-12"
         onSubmit={(e) => e.preventDefault()}
       >
         <input
