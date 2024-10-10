@@ -257,11 +257,11 @@ const Login = () => {
             </button>
 
             <button
-              className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg   text-white text-xs md:text-lg flex justify-center p-4   bg-red-700 w-full rounded-none  "
+              className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg   text-white text-xs md:text-lg flex justify-center   bg-red-700 w-full rounded-none  "
               onClick={handleGoogleLogin}
             >
               <img
-                className="  w-6 h-6 md:mr-2 "
+                className="   w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8 md:mr-2 "
                 alt="google-icon"
                 src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000"
               />
