@@ -4,11 +4,8 @@ const PopupCard = ({ movie, closePopup }) => {
   return (
     <div className="  fixed inset-10 bg-black bg-opacity-50 flex justify-center items-center ">
       <div
-        className="bg-black rounded-lg p-4 sm:p-6 relative  max-w-xs sm:max-w-md w-5/6 sm:w-full md:w-full lg:w-full shadow-lg md:shadow-xl shadow-red-200 bg-cover bg-center opacity"
-        style={{
-          
-          backgroundImage: `url(https://image.tmdb.org/t/p/w500${movie.backdrop_path})`,
-        }}
+        className="bg-zinc-700 rounded-lg p-4 sm:p-6 relative  max-w-xs sm:max-w-md w-5/6 sm:w-full md:w-full lg:w-full shadow-lg md:shadow-xl shadow-red-200 bg-cover bg-center opacity"
+       
       >
         <button
          
@@ -33,19 +30,19 @@ const PopupCard = ({ movie, closePopup }) => {
         />
         <p
           className="text-white text-xs hover:text-base sm:text-sm sm:hover:text-base md:text-base lg:hover:text-xl lg:text-lg xl:text-lg  "
-          style={{ textShadow: "2px 2px 8px rgba(255, 0, 0, 0.7)" }}
+          // style={{ textShadow: "2px 2px 8px rgba(255, 0, 0, 0.7)" }}
         >
           {"Popularity :" + movie.popularity}
         </p>
         <p
           className="text-white text-xs hover:text-base sm:text-sm sm:hover:text-base md:text-base lg:hover:text-xl lg:text-lg xl:text-lg  mb-4 "
-          style={{ textShadow: "2px 2px 8px rgba(255, 0, 0, 0.7)" }}
+          // style={{ textShadow: "2px 2px 8px rgba(255, 0, 0, 0.7)" }}
         >
           {movie.overview}
         </p>
         <p
           className="text-white text-xs hover:text-base sm:text-sm sm:hover:text-base md:text-base lg:hover:text-xl lg:text-lg xl:text-lg  "
-          style={{ textShadow: "2px 2px 8px rgba(255, 0, 0, 0.7)" }}
+          // style={{ textShadow: "2px 2px 8px rgba(255, 0, 0, 0.7)" }}
         >
           Release Date: {movie.release_date}
         </p>
