@@ -67,7 +67,7 @@ const Header = () => {
     setIsOpen(false);
   };
   return (
-    <div className="absolute w-screen px-0 py-0 bg-gradient-to-b from-black z-20 flex  flex-col md:flex-row justify-between ">
+    <div className="absolute w-screen px-4 py-0 bg-gradient-to-b from-black z-20 flex  flex-col md:flex-row justify-between ">
       {/* <div className="flex-shrink-0"> */}
       <img
         className="w-28 sm:w-32 md:w-40 lg:w-48 xl:w-64 mx-auto md:mx-0 md:mt-[-2%]"
