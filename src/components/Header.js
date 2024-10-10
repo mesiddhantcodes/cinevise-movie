@@ -67,7 +67,7 @@ const Header = () => {
     setIsOpen(false);
   };
   return (
-    <div className="absolute w-screen px-8 py-0 bg-gradient-to-b from-black z-20 flex  flex-col md:flex-row justify-between ">
+    <div className="absolute w-screen px-0 py-0 bg-gradient-to-b from-black z-20 flex  flex-col md:flex-row justify-between ">
       {/* <div className="flex-shrink-0"> */}
       <img
         className="w-28 sm:w-32 md:w-40 lg:w-48 xl:w-64 mx-auto md:mx-0 md:mt-[-2%]"
@@ -82,9 +82,9 @@ const Header = () => {
                 tabIndex={0}
                 role="button"
                 onClick={toggleDropdown}
-                className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-red-500  text-white text-xs md:text-lg hover:bg-opacity-0"
+                className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-red-500  text-white text-xs md:text-lg hover:bg-opacity-50 "
               >
-              {lang[langKey].selectBtn}
+                {lang[langKey].selectBtn}
               </div>
               {isOpen && (
                 <ul
@@ -94,7 +94,7 @@ const Header = () => {
                   {SUPPORTED_LANGUAGES.map((lang) => (
                     <li key={lang.identifier}>
                       <button
-                        className="block px-2 py-2 hover:bg-black-400"
+                        className=" block px-2 py-2 hover:bg-black-400"
                         onClick={() => handleItemClick(lang.identifier)}
                       >
                         {lang.name}
@@ -120,7 +120,7 @@ const Header = () => {
             {lang[langKey].signBtn}
           </button>
           <img
-            className=" md:block w-16 h-16 p-2 "
+            className="  w-10 h-10 md:w-16 md:h-16 p-2 "
             alt="usericon"
             src={user?.photoURL}
           />
