@@ -1,9 +1,11 @@
 import React from "react";
 import MovieList from "./MovieList";
 import { useSelector } from "react-redux";
+import Loader from "./Loader";
 
 const SecondaryContainer = () => {
   const movies = useSelector((store) => store.movies);
+  if (!movies) return <Loader />;
   // console.log("secondary ",movies)
   return (
     movies?.nowPlayingMovies && (

@@ -2,10 +2,11 @@ import React from "react";
 import { useSelector } from "react-redux";
 import VideoTitle from "./VideoTitle";
 import VideoBackGround from "./VideoBackGround";
+import Loader from "./Loader";
 
 const MainContanier = () => {
   const movies = useSelector((store) => store.movies?.nowPlayingMovies);
-  if (!movies) return; //this is also known as early return
+  if (!movies) return <Loader/>; //this is also known as early return
 
   const mainMovies = movies[1];
   const { title, overview, release_date, id } = mainMovies;
