@@ -32,7 +32,6 @@ const AiSearchBar = () => {
       });
       const result = await model.generateContent(gptQuery);
       const responseText = await result.response.text();
-
       if (!responseText || responseText.trim() === "") {
         setLoading(false);
         return;
