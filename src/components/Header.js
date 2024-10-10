@@ -82,7 +82,7 @@ const Header = () => {
                 tabIndex={0}
                 role="button"
                 onClick={toggleDropdown}
-                className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-red-500  text-white text-xs md:text-lg hover:bg-opacity-50 "
+                className="btn btn-sm sm:btn-sm md:btn-md lg:btn-lg bg-red-500  text-white text-xs md:text-lg hover:bg-opacity-50 "
               >
                 {lang[langKey].selectBtn}
               </div>
@@ -107,7 +107,7 @@ const Header = () => {
           )}
 
           <button
-            className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-red-500  text-white text-xs md:text-lg hover:bg-opacity-50"
+            className="btn btn-sm sm:btn-sm md:btn-md lg:btn-lg bg-red-500  text-white text-xs md:text-lg hover:bg-opacity-50"
             onClick={handleAiSearch}
           >
             {gptShowSearch ? lang[langKey].homeBtn : "Movie-Search"}
@@ -115,7 +115,7 @@ const Header = () => {
 
           <button
             onClick={handleSignOut}
-            className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-red-500  text-white text-xs md:text-lg hover:bg-opacity-50"
+            className="btn btn-sm sm:btn-sm md:btn-md lg:btn-lg bg-red-500  text-white text-xs md:text-lg hover:bg-opacity-50"
           >
             {lang[langKey].signBtn}
           </button>

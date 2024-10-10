@@ -153,8 +153,7 @@ const Login = () => {
       <Header />
       <div className="absolute w-full h-full">
         <img
-          className="w-full h-screen object-cover 
-           "
+          className="w-full h-screen object-cover opacity-50"
           //h-screen object-cover md:w-full md:h-auto
           src={BG_URL}
           alt="logo"
@@ -165,11 +164,6 @@ const Login = () => {
         onSubmit={(e) => e.preventDefault()}
         className=" text-white w-10/12 sm:w-8/12 md:w-6/12 lg:w-5/12  xl:w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 rounded-lg bg-opacity-80"
       >
-        {/*   text-white w-11/12 sm:w-8/12 md:w-5/12 lg:w-4/12 xl:w-3/12
-    absolute p-8 sm:p-10 md:p-12 
-    bg-black my-16 sm:my-20 md:my-24 lg:my-32 xl:my-36
-    mx-auto left-0 right-0 
-    rounded-lg bg-opacity-80 */}
         <h1 className="font-bold text-2xl md:text-4xl py-4">
           {isSignInForm ? "Sign In" : "Sign Up"}
         </h1>
@@ -230,13 +224,13 @@ const Login = () => {
         {isSignInForm ? (
           <>
             <button
-              className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-red-700  text-white text-xs md:text-lg w-full mb-2 mt-4 rounded-none"
+              className="btn btn-sm sm:btn-sm md:btn-md lg:btn-lg bg-red-700  text-white text-xs md:text-lg w-full mb-2 mt-4 rounded-none"
               onClick={handleButtonClick}
             >
               {isSignInForm ? "Sign In" : "Sign Up"}
             </button>
             <button
-              className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg   text-white text-xs md:text-lg flex justify-center    bg-red-700 w-full rounded-none"
+              className="btn btn-sm sm:btn-sm md:btn-md lg:btn-lg   text-white text-xs md:text-lg flex justify-center    bg-red-700 w-full rounded-none"
               onClick={handleGoogleLogin}
             >
               <img
@@ -250,14 +244,14 @@ const Login = () => {
         ) : (
           <>
             <button
-              className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-red-700  text-white text-xs md:text-lg w-full mb-2 mt-4 rounded-none"
+              className="btn btn-sm sm:btn-sm md:btn-md lg:btn-lg bg-red-700  text-white text-xs md:text-lg w-full mb-2 mt-4 rounded-none"
               onClick={handleButtonClick}
             >
               {isSignInForm ? "Sign In" : "Sign Up"}
             </button>
 
             <button
-              className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg   text-white text-xs md:text-lg flex justify-center   bg-red-700 w-full rounded-none  "
+              className="btn btn-sm sm:btn-sm md:btn-md lg:btn-lg   text-white text-xs md:text-lg flex justify-center   bg-red-700 w-full rounded-none  "
               onClick={handleGoogleLogin}
             >
               <img
