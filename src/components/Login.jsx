@@ -163,7 +163,7 @@ const Login = () => {
 
       <form
         onSubmit={(e) => e.preventDefault()}
-        className=" text-white w-10/12 sm:w-8/12 md:w-5/12 lg:w-4/12  xl:w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 rounded-lg bg-opacity-80"
+        className=" text-white w-10/12 sm:w-8/12 md:w-6/12 lg:w-5/12  xl:w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 rounded-lg bg-opacity-80"
       >
         {/*   text-white w-11/12 sm:w-8/12 md:w-5/12 lg:w-4/12 xl:w-3/12
     absolute p-8 sm:p-10 md:p-12 
@@ -236,11 +236,11 @@ const Login = () => {
               {isSignInForm ? "Sign In" : "Sign Up"}
             </button>
             <button
-              className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg   text-white text-xs md:text-lg flex justify-center p-4   bg-red-700 w-full rounded-none"
+              className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg   text-white text-xs md:text-lg flex justify-center    bg-red-700 w-full rounded-none"
               onClick={handleGoogleLogin}
             >
               <img
-                className="  w-6 h-6 md:mr-2 "
+                className="  w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8 md:mr-2"
                 alt="google-icon"
                 src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000"
               />
