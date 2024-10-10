@@ -6,13 +6,13 @@ import genAI from "../utils/openAi";
 import { addGptMovieResult } from "../redux/gptSlice";
 import useSearchMovieTMDB from "../hooks/useSearchMovieTMDB";
 
-const GptSearchBar = () => {
+const AiSearchBar = () => {
   const dispatch = useDispatch();
   const langKey = useSelector((store) => store.config.lang);
   const searchText = useRef(null);
   const searchMovieTMDB = useSearchMovieTMDB();
 
-  const handleGptSearchClick = async () => {
+  const handleAiSearchClick = async () => {
     // console.log(searchText.current.value);
     // make an API call to GPT API and get Movie Results
     const gptQuery =
@@ -42,18 +42,18 @@ const GptSearchBar = () => {
   return (
     <div className="pt-[35%] md:pt-[10%] flex justify-center">
       <form
-        className=" w-full md:w-1/2  m-6 bg-black grid grid-cols-12"
+        className=" w-full mt-20 md:w-1/2  m-6 bg-black grid grid-cols-12 "
         onSubmit={(e) => e.preventDefault()}
       >
         <input
           ref={searchText}
           type="text"
-          className="p-4 m-4 col-span-9"
-          placeholder={lang[langKey].gptSearchplaceHolder}
+          className="text-xs m-2 md:text-xl md:p-4 md:m-4 rounded-lg col-span-9"
+          placeholder={lang[langKey].AiSearchplaceHolder}
         />
         <button
-          className="py-2 px-4 m-4 bg-red-600 text-white rounded-lg col-span-3"
-          onClick={handleGptSearchClick}
+          className="text-s m-2  md:text-xl md:py-2 md:px-4 md:m-4 bg-red-600 text-white rounded-lg col-span-3"
+          onClick={handleAiSearchClick}
         >
           {lang[langKey]?.search}
         </button>
@@ -62,4 +62,4 @@ const GptSearchBar = () => {
   );
 };
 
-export default GptSearchBar;
+export default AiSearchBar;

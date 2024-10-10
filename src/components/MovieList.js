@@ -4,8 +4,6 @@ import PopupCard from "./popupCard";
 
 const MovieList = ({ title, movies }) => {
   const [selectedMovie, setSelectedMovie] = useState(null);
-
-  // Function to handle clicking a movie card
   const handleCardClick = (movie) => {
     setSelectedMovie(movie); // Set the selected movie to show the popup
   };
@@ -14,7 +12,7 @@ const MovieList = ({ title, movies }) => {
   const closePopup = () => {
     setSelectedMovie(null); // Set selected movie to null to hide the popup
   };
-  // console.log(movies);
+
   return (
     <div className="px-6 ">
       <h1 className="text-lg md:text-4xl py-4 text-white">{title} </h1>

@@ -8,12 +8,12 @@ const MainContanier = () => {
   if (!movies) return; //this is also known as early return
 
   const mainMovies = movies[1];
-  const { original_title, overview, release_date, id } = mainMovies;
-  console.log(mainMovies);
+  const { title, overview, release_date, id } = mainMovies;
+  // console.log(mainMovies);
   return (
     <div className="pt-[30%] bg-black md:pt-0">
       <VideoTitle
-        title={original_title}
+        title={title}
         overview={overview}
         release_date={release_date}
       />
